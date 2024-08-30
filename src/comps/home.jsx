@@ -8,7 +8,7 @@ import ui from "../assets/moon_ui.png";
 import bg4 from "../assets/bg5.png";
 import bg5 from "../assets/bg6.png";
 import bg6 from "../assets/bg7.png";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import $ from 'jquery';
 import { useEffect, useRef, useState } from 'react';
 import { useSpring, animated } from "@react-spring/web";
@@ -16,6 +16,7 @@ import { useSpring, animated } from "@react-spring/web";
 export default function Header() {
     const [inView, setInView] = useState(false);
     const ref = useRef();
+    const navigate = useNavigate();
 
     const [inView2, setInView2] = useState(false);
     const ref2 = useRef();
@@ -34,10 +35,17 @@ export default function Header() {
 
     useEffect(() => {
         $(document.body).ready(() => {
-            setTimeout(() => {
-                $("#main").fadeIn(200);
-            }, 2000);
+            if(/Android|IPhone/i.test(navigator.userAgent)){
+                navigate('/isMobile', { replace: true })
+            }
+            else{
+                setTimeout(() => {
+                    $("#main").fadeIn(200);
+                }, 2000);
+            }
         });
+
+        
     
         const observer1 = new IntersectionObserver(
             ([entry]) => {
