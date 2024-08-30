@@ -33,14 +33,12 @@ export default function Header() {
     });
 
     useEffect(() => {
-        // jQuery fade-in effect
         $(document.body).ready(() => {
             setTimeout(() => {
                 $("#main").fadeIn(200);
             }, 2000);
         });
     
-        // IntersectionObserver for the first element
         const observer1 = new IntersectionObserver(
             ([entry]) => {
                 setInView(entry.isIntersecting);
@@ -52,7 +50,6 @@ export default function Header() {
             observer1.observe(ref.current);
         }
     
-        // IntersectionObserver for the second element
         const observer2 = new IntersectionObserver(
             ([entry]) => {
                 setInView2(entry.isIntersecting);
@@ -64,7 +61,6 @@ export default function Header() {
             observer2.observe(ref2.current);
         }
     
-        // Cleanup function to unobserve elements
         return () => {
             if (ref.current) {
                 observer1.unobserve(ref.current);
@@ -242,6 +238,15 @@ export default function Header() {
             </div>
             <div id="get_started">
                 <img src={bg6} id="bg6"/>
+                <iframe id="basics_vid" src="https://www.youtube.com/embed/q8tGNMo_jHg"/>
+                <article id="basics_art">get started in you moon animation career</article>
+            </div>
+            <div id="welcome">
+                <img id="the_moon" src={moon} height="125px" width="125px" />
+                <h3 id="elmoon">Welcome to the <br></br> Moon Animator community</h3>
+                <Link to="/docs" id="redirect">
+                    <button id="redir">Get Started</button>
+                </Link>
             </div>
             <Outlet />
         </div>
