@@ -95,9 +95,9 @@ export default function Header() {
                     <Link to="/docs" id="docs">
                         <span>DOCS</span>
                     </Link>
-                    <Link to="/download" id="download">
+                    <a href="https://create.roblox.com/store/asset/6372450588/Moon-Animator" id="download">
                         <span>DOWNLOAD</span>
-                    </Link>
+                    </a>
                     <Link to="/about" id="about">
                         <span>ABOUT</span>
                     </Link>
@@ -238,9 +238,9 @@ export default function Header() {
                 <h1 id="module">Plugins- </h1>
                 <animated.article ref={ref2} style={styles2} id="explain-module">Moon animator plugins will help you get your animations to new heights, or to make them get finished faster</animated.article>
                 <div id="webp-div" className="flex">
-                    <img src="https://tr.rbxcdn.com/1010312c003de5b1a456eaaef89d03dd/420/420/Image/Webp" className="webp" />
+                    <img src="https://tr.rbxcdn.com/97689939a38d6fe665fcd82a897001f5/420/420/Image/Webp" className="webp" />
                     <img src="https://tr.rbxcdn.com/8f35982f18b846a8e4194c8211c72d99/420/420/Image/Webp" className="webp" />
-                    <img src="https://tr.rbxcdn.com/88e82b8b7e7163a9bbe48dcb8e422896/250/250/Image/Webp" className="webp" />
+                    <img src="https://tr.rbxcdn.com/6a3328c1c0268b0104a41ecea8718890/250/250/Image/Webp" className="webp" />
                     <img src="https://tr.rbxcdn.com/bbf504f5cf731b2017d6f3ea9f027f15/420/420/Image/Webp" className="webp" />
                 </div>
             </div>
